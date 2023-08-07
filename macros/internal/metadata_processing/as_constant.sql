@@ -15,7 +15,7 @@
 
         {%- if column_str | first == "!" -%}
 
-            {{- return("'" ~ column_str[1:] ~ "'") -}}
+            {{- return("'" ~ column_str[1:] ~ "'" ~ "::TEXT") -}}
 
         {%- else -%}
 
